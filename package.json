@@ -7,7 +7,7 @@
     "node": "18.12.1"
   },
   "scripts": {
-    "preinstall": "node -e \"const semver = process.versions.node; const required = '18.12.1'; if (semver !== required) { console.error('This project requires Node ' + required + '. Use nvm to switch: \u0027nvm install ' + required + ' && nvm use ' + required + '\u0027'); process.exit(1); }\"",
+    "preinstall": "node -e \"const semver = process.versions.node; const required = '18.12.1'; if (semver !== required) { console.error('This project requires Node ', required, '. Use nvm to switch: nvm install ', required, ' && nvm use ', required ); process.exit(1); }\"",
     "start": "node app.js",
     "dev": "nodemon -I -q node app.js 2>&1 >> log.out & livereload -e 'ejs,js,html,css,scss' -x 'out,w3s-dynamic-storage/,node_modules/' -w 2000",
     "admin:createadminuser": "run-func util/admin.js createAdministratorUser",
